@@ -1,0 +1,18 @@
+Algorithm Performance Statistics
+==============================
+
+Minimax Algorithm:
+  Mean Time: 1.823702 seconds
+  Median Time: 1.692225 seconds
+  Standard Deviation: 0.655171 seconds
+  Min Time: 0.977015 seconds
+  Max Time: 2.939286 seconds
+
+Alpha-Beta Algorithm:
+  Mean Time: 0.124242 seconds
+  Median Time: 0.116563 seconds
+  Standard Deviation: 0.034300 seconds
+  Min Time: 0.084445 seconds
+  Max Time: 0.188744 seconds
+
+Alpha-Beta improves performance by 93.19% on average
