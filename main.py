@@ -184,39 +184,11 @@ class MainMenuWindow(QMainWindow):
         stats_layout.addWidget(back_btn)
 
         self.stacked_widget.addWidget(stats_widget)
-#============================================================================================================================
-    # def create_about_page(self):
-    #     about_widget = QWidget()
-    #     about_layout = QVBoxLayout(about_widget)
-
-    #     title_label = QLabel("About 5x5 Tic-Tac-Toe")
-    #     title_label.setAlignment(Qt.AlignCenter)
-    #     title_label.setFont(QFont("Arial", 18, QFont.Bold))
-    #     about_layout.addWidget(title_label)
-
-    #     info_text = QTextEdit()
-    #     info_text.setReadOnly(True)
-    #     info_text.setHtml("""<h2>5x5 Tic-Tac-Toe with AI</h2>
-    #     <p>This application implements a 5x5 Tic-Tac-Toe game where a human player can play against an AI opponent.</p>
-    #     <h3>Features:</h3>
-    #     <ul>
-    #         <li>Play on a 5x5 grid against an AI opponent</li>
-    #         <li>Choose between two AI algorithms: Minimax and Alpha-Beta Pruning</li>
-    #         <li>Performance analysis of AI algorithms</li>
-    #         <li>Game result tracking in a database</li>
-    #     </ul>""")
-    #     about_layout.addWidget(info_text)
-
-    #     back_btn = QPushButton("Back to Main Menu")
-    #     back_btn.clicked.connect(lambda: self.stacked_widget.setCurrentIndex(0))
-    #     about_layout.addWidget(back_btn)
-
-    #     self.stacked_widget.addWidget(about_widget)
-
+   
     def show_statistics(self):
         self.stacked_widget.setCurrentIndex(2)
         self.load_game_history()
-#====================================================================================================
+
     def load_game_history(self):
         """Load game history from database into the table"""
         try:

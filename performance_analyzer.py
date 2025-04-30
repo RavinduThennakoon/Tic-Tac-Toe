@@ -11,7 +11,7 @@ from utils import check_winner, get_empty_cells
 
 class PerformanceAnalyzer:
     def __init__(self, db_path="tic_tac_toe.db"):
-        """Initialize the performance analyzer with the database path"""
+        #Initialize the performance analyzer with the database path
         self.db_path = db_path
         
     def _get_connection(self):
@@ -23,10 +23,7 @@ class PerformanceAnalyzer:
             return None
             
     def run_algorithm_comparison(self, num_games=10):
-        """
-        Run a comparison between Minimax and Alpha-Beta for a specified number of games
-        Records timing data for each move in each game
-        """
+       
         print(f"Running {num_games} game rounds to compare algorithms...")
         
         # Track move times for both algorithms
@@ -81,10 +78,7 @@ class PerformanceAnalyzer:
         return results
             
     def get_algorithm_comparison_from_db(self):
-        """
-        Retrieve algorithm comparison data from the database
-        Returns a pandas DataFrame with the comparison data
-        """
+      
         conn = self._get_connection()
         if not conn:
             return None

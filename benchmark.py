@@ -8,11 +8,7 @@ from utils import check_winner, get_empty_cells
 import random
 
 class AlgorithmBenchmark:
-    """
-    Benchmark and compare the performance of Minimax and Alpha-Beta pruning algorithms
-    for the 5x5 Tic-Tac-Toe game.
-    """
-    
+   
     def __init__(self):
         """Initialize the benchmark class"""
         self.results = {
@@ -34,15 +30,7 @@ class AlgorithmBenchmark:
         self.alphabeta_nodes = 0
     
     def _create_board_with_fill_percentage(self, fill_percentage):
-        """
-        Create a random board with approximately the given fill percentage
         
-        Args:
-            fill_percentage: Percentage of the board to fill (0-100)
-            
-        Returns:
-            A randomly generated board with the specified fill percentage
-        """
         board = [[" " for _ in range(5)] for _ in range(5)]
         total_cells = 25
         cells_to_fill = int(total_cells * fill_percentage / 100)
@@ -55,7 +43,7 @@ class AlgorithmBenchmark:
         symbols = ["X", "O"]
         for i in range(cells_to_fill):
             row, col = all_positions[i]
-            board[row][col] = symbols[i % 2]
+            board[row][col] = symbols(["X","O"])#[i % 2]
         
         return board
     
@@ -156,15 +144,7 @@ class AlgorithmBenchmark:
         return best_move, node_count
     
     def run_benchmark(self, iterations=10):
-        """
-        Run benchmark comparing Minimax and Alpha-Beta pruning algorithms
-        
-        Args:
-            iterations: Number of iterations for each fill percentage
-            
-        Returns:
-            DataFrame with benchmark results
-        """
+       
         # Test different board fill percentages
         fill_percentages = [20, 40, 60, 80]
         
@@ -203,13 +183,7 @@ class AlgorithmBenchmark:
         return pd.DataFrame(self.results)
     
     def plot_results(self, results=None, save_path=None):
-        """
-        Plot benchmark results
-        
-        Args:
-            results: DataFrame with benchmark results
-            save_path: Path to save the plot
-        """
+      
         if results is None:
             results = pd.DataFrame(self.results)
         
